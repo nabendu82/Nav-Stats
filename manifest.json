@@ -1,11 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Navigation Stats",
-  "version": "0.1.0",
+  "name": "Nav Stats",
+  "version": "1.0",
   "browser_action": {
-    "default_icon": {
-      "32": "icons/icon-32.png"
-    },
+    "default_icon": "icons/logo_64.png",
     "default_title": "Navigation Stats",
     "default_popup": "popup.html"
   },
@@ -13,8 +11,11 @@
   "background": {
     "scripts": [ "background.js" ]
   },
+  "description": "Show navigation stats about which pages you've visited.",
   "icons": {
-    "32": "icons/icon-32.png"
+    "32": "icons/logo_32.png",
+    "48": "icons/logo_48.png",
+    "64": "icons/logo_64.png"
   },
   "applications": {
     "gecko": {

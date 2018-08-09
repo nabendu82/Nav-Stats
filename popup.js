@@ -19,7 +19,7 @@ function addElements(element, array, callback) {
     }
 
     const listItem = document.createElement("li");
-    listItem.textContent = callback(array[i]);
+    listItem.innerHTML = callback(array[i]);
     element.appendChild(listItem);
   }
 }
@@ -34,13 +34,13 @@ gettingStoredStats.then(results => {
   let hostElement = document.getElementById("hosts");
   let sortedHosts = sorter(results.host);
   addElements(hostElement, sortedHosts, (host) => {
-    return `${host}: ${results.host[host]} visit(s)`;
+    return `<span id="hostName">${host}</span>: <span class="theCount">${results.host[host]}</span> visit(s)`;
   });
 
   let typeElement = document.getElementById("types");
   let sortedTypes = sorter(results.type);
   addElements(typeElement, sortedTypes, (type) => {
-    return `${type}: ${results.type[type]} use(s)`;
+    return `<span id="typeName">${type}</span>: <span class="theCount">${results.type[type]}</span> use(s)`;
   });
 
 });
