@@ -1,4 +1,4 @@
-# navigation-stats
+# Nav Stats
 
 ## What it does ##
 
